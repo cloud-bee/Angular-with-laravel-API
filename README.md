@@ -36,6 +36,21 @@ npm install
 ```
 > For more information about npm usage, check [their official documentation](https://docs.npmjs.com/downloading-and-installing-packages-locally).
 
+
+## Laravel envirement stup
+
+Generate `.env` File
+
+```bash
+cp .env.example .env
+```
+
+Change the database name and password in .env file and running by following the command:
+
+```bash
+$ php artisan migrate:fresh --seed
+```
+
 To publish the configuration file in Laravel, you need to run following line of code :
 
 ```bash
@@ -49,15 +64,6 @@ $ php artisan jwt:secret
 ```
 
 > Do you need to more details of laravel jwt-auth dependencey, Chack **https://jwt-auth.readthedocs.io/en/develop/** 
-
-
-## Laravel envirement stup
-
-Change the database name and password in .env file and running by following the command:
-
-```bash
-$ php artisan migrate:fresh --seed
-```
 
 ## Processing by API URL
 
