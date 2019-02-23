@@ -1,0 +1,12 @@
+.ex-footer {
+  width: 100%;
+  position: absolute;
+  text-align: right;
+  bottom: 0px;
+}
+
+@media (max-width: 576px) {
+  .ex-footer {
+    text-align: center;
+  }
+}

@@ -1,0 +1,48 @@
+<div class="ex-card-center">
+  <mat-card class="ex-card">
+    <mat-progress-bar mode="indeterminate" *ngIf="progressBar"></mat-progress-bar>
+    <mat-card-header class="ex-card-header">
+      <mat-card-title>Sign up</mat-card-title>
+      <mat-card-subtitle>to create to your account</mat-card-subtitle>
+    </mat-card-header>
+    <form class="ex-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <mat-form-field class="ex-full-width">
+          <input matInput placeholder="Name" type="text" formControlName="name">
+          <mat-error *ngFor="let validation of this.sgValidation.register_credential_validation.name">
+            <mat-error class="error-message" *ngIf="signupForm.get('name').hasError(validation.type) && (signupForm.get('name').dirty || signupForm.get('name').touched || onSubmit)">{{validation.message}}</mat-error>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="ex-full-width">
+          <input matInput placeholder="E-mail" type="email" formControlName="email">
+          <mat-error *ngFor="let validation of this.sgValidation.register_credential_validation.email">
+            <mat-error class="error-message" *ngIf="signupForm.get('email').hasError(validation.type) && (signupForm.get('email').dirty || signupForm.get('email').touched || onSubmit)">{{validation.message}}</mat-error>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="ex-full-width">
+          <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hide = !hide">{{ hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <mat-error *ngFor="let validation of this.sgValidation.register_credential_validation.password">
+            <mat-error class="error-message" *ngIf="signupForm.get('password').hasError(validation.type) && (signupForm.get('password').dirty || signupForm.get('password').touched || onSubmit)">{{validation.message}}</mat-error>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="ex-full-width">
+          <input matInput placeholder="Confirm Password" formControlName="confirmpassword" [type]="hide ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hide = !hide">{{ hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <mat-error *ngFor="let validation of this.sgValidation.register_credential_validation.confirm_password">
+            <mat-error class="error-message" *ngIf="signupForm.get('confirmpassword').hasError(validation.type) && (signupForm.get('confirmpassword').dirty || signupForm.get('confirmpassword').touched || onSubmit)">{{validation.message}}</mat-error>
+          </mat-error>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button type="submit" mat-flat-button color="primary" class="ex-right-center">Sign up</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+  <div class="ex-button-row">
+    <a mat-button routerLink=".">Help</a>
+    <a mat-button routerLink=".">Terms & Privacy</a>
+    <a mat-button routerLink=".">English (United States)</a>
+  </div>
+
+</div>

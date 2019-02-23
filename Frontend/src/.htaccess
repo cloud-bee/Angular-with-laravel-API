@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+    RewriteEngine On
+    # If an existing asset or directory is requested go to it as it is
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+    RewriteRule ^ - [L]
+
+    # If the requested resource doesn't exist, use index.html
+    RewriteRule ^https://activeantz.github.io/bee.github.io/
+</IfModule>

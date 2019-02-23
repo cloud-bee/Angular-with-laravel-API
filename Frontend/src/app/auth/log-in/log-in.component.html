@@ -1,0 +1,39 @@
+<div class="ex-card-center">
+
+  <mat-card class="ex-card">
+    <mat-progress-bar mode="indeterminate" *ngIf="progressBar"></mat-progress-bar>
+    <mat-card-header class="ex-card-header">
+      <mat-card-title>Sign in</mat-card-title>
+      <mat-card-subtitle>to continue to your account</mat-card-subtitle>
+    </mat-card-header>
+    <form class="ex-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-card-content>
+        <mat-form-field class="ex-full-width">
+          <input matInput placeholder="E-mail" type="email" formControlName="email">
+          <mat-error *ngFor="let validation of this.sgValidation.credential_validation.email">
+            <mat-error class="error-message" *ngIf="loginForm.get('email').hasError(validation.type) && (loginForm.get('email').dirty || loginForm.get('email').touched || onSubmit)">{{validation.message}}</mat-error>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="ex-full-width">
+          <input matInput formControlName="password" placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+          <mat-icon matSuffix (click)="hide = !hide">{{ hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <mat-error *ngFor="let validation of this.sgValidation.credential_validation.password">
+            <mat-error class="error-message" *ngIf="loginForm.get('password').hasError(validation.type) && (loginForm.get('password').dirty || loginForm.get('password').touched || onSubmit)">{{validation.message}}</mat-error>
+          </mat-error>
+        </mat-form-field>
+        <a class="ex-link" routerLink=".">Forgot password?</a>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-stroked-button [routerLink]="['/signup']" routerLinkActive="router-link-active" mat-button color="primary">Create
+          account</a>
+        <button mat-flat-button color="primary" class="ex-right-center">Log in</button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+  <div class="ex-button-row">
+    <a mat-button routerLink=".">Help</a>
+    <a mat-button routerLink=".">Terms & Privacy</a>
+    <a mat-button routerLink=".">English (United States)</a>
+  </div>
+
+</div>

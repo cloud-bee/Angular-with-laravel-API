@@ -1,0 +1,95 @@
+.ex-card-center {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  .ex-card-center {
+    max-width: 420px;
+  }
+}
+
+.ex-card {
+  margin-top: 50px;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0px 0px 0px 0px;
+}
+
+@media (max-width: 576px) {
+  .ex-card {
+    max-width: 86%;
+  }
+}
+
+@media (min-width: 576px) {
+  .ex-card {
+    margin-top: 200px;
+    max-width: 350px;
+    border: 1px solid #dfdfdf;
+  }
+}
+
+.ex-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.ex-full-width {
+  width: 100%;
+}
+
+.ex-card-header {
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+.mat-card-header {
+  justify-content: center;
+  text-align: center;
+}
+
+.ex-right-center {
+  float: right;
+}
+
+.ex-button-row {
+  padding-top: 10px;
+}
+
+@media (max-width: 576px) {
+  .ex-button-row {
+    display: none;
+  }
+}
+
+.ex-button-row a {
+  float: right;
+  line-height: 28px;
+  font-size: 12px;
+  margin-right: 8px;
+  color: #757575;
+}
+
+.ex-button-row a:last-child {
+  float: left;
+}
+
+.ex-link {
+  font-size: 13px;
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+.mat-progress-bar{
+  position: absolute;
+  top: 0.1px;
+  left: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
