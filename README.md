@@ -37,7 +37,7 @@ npm install
 > For more information about npm usage, check [their official documentation](https://docs.npmjs.com/downloading-and-installing-packages-locally).
 
 
-## Laravel envirement stup
+## Laravel envirement setup
 
 Generate `.env` File
 
