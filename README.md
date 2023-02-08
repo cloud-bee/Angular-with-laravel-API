@@ -18,18 +18,16 @@
 
 ## Installation
 
-In the project Clone with HTTPs section, click to <span class="octicon octicon-clippy" aria-label="The clipboard icon " title="The clipboard icon "></span> copy the clone URL for the repository:
+Clone the repository using the clone URL in the "Clone with HTTPs" section of the project and install the dependency, for that follow the below command:
 
-To install the dependency, run the following cammand:
-
-Use By below the command for the Backend:
+For Backend Dependency Installation:
 
 ```bash
 composer install
 ```
 > For more information about Composer usage, check [their official documentation](https://getcomposer.org/doc/00-intro.md).
 
-Angular install the dependency, run the following command. (Frontend)
+Frontend Dependency Installation (Angular)
 
 ```bash
 npm install
@@ -37,27 +35,27 @@ npm install
 > For more information about npm usage, check [their official documentation](https://docs.npmjs.com/downloading-and-installing-packages-locally).
 
 
-## Laravel envirement setup
+## Laravel Environment Setup
 
-Generate `.env` File
+Generate the .env file by running:
 
 ```bash
 cp .env.example .env
 ```
 
-Change the database name and password in .env file and running by following the command:
+Update the database name and password in the .env file and run:
 
 ```bash
 $ php artisan migrate:fresh --seed
 ```
 
-To publish the configuration file in Laravel, you need to run following line of code :
+To publish the configuration file in Laravel, you have to run below line of the code:
 
 ```bash
 $ php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"
 ```
 
-When that is done, set the jwt-auth secret by running the following command:
+When it's done, set the jwt-auth secret:
 
 ```bash
 $ php artisan jwt:secret
@@ -67,7 +65,7 @@ $ php artisan jwt:secret
 
 ## Processing by API URL
 
-Change the api url in the proxy.conf.json file, And Do you want to change the API Url requested process. follow the angular documentation **https://angular.io/guide/build**
+Change the api url in the proxy.conf.json file, and do you want to change the API Url requested process. follow the angular documentation **https://angular.io/guide/build**
 
 ```bash
 {
@@ -79,13 +77,13 @@ Change the api url in the proxy.conf.json file, And Do you want to change the AP
 }
 ```
 
-Launch the server by using the CLI command `ng serve`, with the --open option for Frontend
+Run the server using the command: "ng serve --open" for the Frontend.
 
 > For more information about Angular usage, check [their official documentation](https://angular.io/guide/quickstart).
 
 ## Issue Reporting
 
-If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
+If you have found a bug or feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
 
 ## Author
 
