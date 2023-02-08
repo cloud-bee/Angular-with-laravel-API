@@ -18,9 +18,11 @@
 
 ## Installation
 
-Clone the repository using the clone URL in the "Clone with HTTPs" section of the project and install the dependency, for that follow the below command:
+Clone the repository using the clone URL in the "Clone with HTTPs" section of the project and install the dependency. 
 
-For Backend Dependency Installation:
+For that follow the below command:
+
+Backend Dependency Installation:
 
 ```bash
 composer install
